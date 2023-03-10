@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+</head>
+<body>
+    <div class="body_page">
+        <div class="main_container">
+            <div class="top_section">
+                <h1>คำนวณภาษี</h1>
+                <p>ช่วยคำนวณภาษีเงินได้บุคคลธรรมดาประจำปี</p>
+            </div>
+            <div class="step_section">
+                <div class="step_wrapper">
+                    <div class="step_number">
+                        <a class="selected">1</a>
+                    </div>
+                    <div class="block_text">รายรับ</div>
+                </div>
+                <div class="step_wrapper">
+                    <div class="step_number">
+                        <a class="disabled">2</a>
+                    </div>
+                    <div class="block_disabled">ลดหย่อน
+                        <span class="d_block_disabled">ครอบครัว</span>
+                    </div>
+                </div>
+                <div class="step_wrapper">
+                    <div class="step_number">
+                        <a class="disabled">3</a>
+                    </div>
+                    <div class="block_disabled">กองทุนสำรองเลี้ยงชีพ
+                        <span class="d_block_disabled">เงินประกันสังคม</span>
+                        <span class="d_block_disabled">และที่อยู่อาศัย</span>
+                    </div>
+                </div>
+                <div class="step_wrapper">
+                    <div class="step_number">
+                        <a class="disabled">4</a>
+                    </div>
+                    <div class="block_disabled">ประกัน</div>
+                </div>
+                <div class="step_wrapper">
+                    <div class="step_number">
+                        <a class="disabled">5</a>
+                    </div>
+                    <div class="block_disabled">กองทุนอื่นๆ</div>
+                </div>
+                <div class="step_wrapper">
+                    <div class="step_number">
+                        <a class="disabled">6</a>
+                    </div>
+                    <div class="block_disabled">คำนวณภาษี</div>
+                </div>
+            </div>
+            <div class="cal_section">
+                <div class="sub_title">รายรับ</div>
+                <div class="step_1">
+                    <div class="input_text_container">
+                        <div class="input_text_label">เงินเดือน (บาท)</div>
+                        <input class="input_text" placeholder="เงินเดือนของคุณเดือนละ" maxlength="10" inputmode="numeric" type="tel">
+                    </div>
+                    <div class="input_text_container">
+                        <div class="input_text_label">โบนัส (บาท)</div>
+                        <input class="input_text" placeholder="ระบุโบนัสที่คุณได้รับในปีนี้" maxlength="10" inputmode="numeric" type="tel">
+                    </div>
+                    <div class="input_text_container">
+                        <div class="input_text_label">รายได้อื่นๆ เช่น การขายของออนไลน์, รับจ้างฟรีแลนซ์ (บาท)</div>
+                        <input class="input_text" placeholder="ระบุรายได้ทั้งปี" maxlength="10" inputmode="numeric" type="tel">
+                    </div>
+                </div>
+            </div>
+            <div class="submit_section">
+                <button class="next_btn">ถัดไป</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
