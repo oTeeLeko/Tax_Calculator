@@ -33,6 +33,7 @@ h1 {
     border-radius: 12px;
     border-style: solid;
     border-width: 0;
+    width: 100%;
 }
 .top_section {
     flex: 1 ;
@@ -57,6 +58,7 @@ h1 {
 .d_block, .block_text {
     font-size: 12px;
     font-weight: 600;
+    color: #000;
 }
 .d_block_disabled, .block_disabled{
     font-size: 12px;
@@ -70,6 +72,7 @@ h1 {
     border-radius: 50%;
     background-color: #1f91a5;
     color: #fff;
+    cursor: pointer;
 }
 .disabled {
     border-width: 0;
@@ -78,6 +81,7 @@ h1 {
     border-radius: 50%;
     background-color: #d9dedf;
     color: #fff;
+    cursor: pointer;
 }
 .cal_section {
     display: flex;
