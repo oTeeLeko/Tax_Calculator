@@ -86,23 +86,29 @@ h1 {
 }
 .sub_title {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 40px;
-    text-align: left;
-    max-width: 510px;
     width: 100%;
-    align-items: center;
 }
-.step_1 {
+.step_1,.step_2,.step_3,.step_4,.step_5,.step_6 {
     display: flex;
     flex-direction: column;
+    width: 65%;
 }
 .input_text {
-    width: 100%;
+    width: 95%;
+    max-width: 370px;
     padding: 15.5px 10px;
     border: 1px solid #bbb;
     border-radius: 6px;
     color: #1f91a5;
+}
+.input_child {
+    padding: 15.5px 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    color: #1f91a5;
+    width: 90%;
 }
 .submit_section {
     text-align: center;
@@ -147,4 +153,159 @@ h1 {
 }
 .input_text_container {
     padding-top: 20px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.status {
+    flex: 1;
+    position: relative;
+    margin-top: 15px;
+    padding-right: 10px;
+}
+.dropdown {
+    padding-top: 20px;
+    width: auto;
+}
+.dropdown_selected {
+    position: relative;
+}
+.dropdown_style {
+    width: 95%;
+    padding: 15.5px 10px;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    text-indent: 1px;
+}
+.discount {
+    padding-top: 10px;
+    color: #1f91a5;
+    font-size: 12px;
+    line-height: 135%;
+}
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #e3e3e3;
+}
+.checkbox,.radiobox {
+    display: flex;
+    grid-gap: 10px;
+    gap: 10px;
+    margin-right: 45px;
+    width: 100%;
+}
+.check_box_container {
+    padding-top: 30px;
+}
+.status_child {
+    flex: 1;
+    position: relative;
+    margin-top: 15px;
+}
+input[type=radio] {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background: #e3e3e3;
+    cursor: pointer;
+}
+input[type=radio]:checked,input[type=checkbox] {
+    accent-color: #1f91a5;
+}
+.home_remark {
+    font-size: 12px;
+    padding: 20px 0;
+    color: #777;
+}
+hr {
+    margin: 20px 0;
+    border: 1px solid #e3e3e3;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.row_1 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    align-items: center;
+}
+.text_1 {
+    flex: 2;
+    font-size: 18px;
+    font-weight: 600;
+}
+.text_2,.net_income,.tax {
+    flex: 0.5;
+    font-size: 18px;
+    font-weight: 600;
+}
+.net_income {
+    color: #1f91a5;
+}
+.tax {
+    color: #d52856;
+}
+.text_3 {
+    flex: 1;
+    font-size: 14px;
+    text-align: right;
+    padding: 0 15px;
+}
+.text_4,.fund {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: right;
+    padding: 0 15px;
+}
+.fund {
+    color: #1f91a5;
+}
+.text_4 {
+    text-align: left;
+    padding-left: 0;
+}
+.input_fund {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: right;
+    padding: 15.5px 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    color: #1f91a5;
+}
+.text_5 {
+    flex: 1;
+    text-align: right;
+    font-size: 14px;
+}
+.text_6 {
+    flex: 1;
+    text-align: left;
+    font-size: 14px;
+}
+.input_6 {
+    flex: 1;
+    padding: 15.5px 10px;
+    text-align: left;
+    border:1px solid #bbb ;
+    border-radius: 6px;
+    color: #1f91a5;
+    font-size: 16px;
+    font-weight: 100;
+    flex-wrap: nowrap;
+}
+.row_2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
 }
