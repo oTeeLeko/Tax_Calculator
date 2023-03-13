@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,56 +29,54 @@
         <div class="step_section">
           <div class="step_wrapper">
             <div class="step_number">
-              <a class="selected">1</a>
+              <a id="a_1" class="selected" onclick="Step_test(1)">1</a>
             </div>
-            <div class="block_text">รายรับ</div>
+            <div id="b_1" class="block_text">รายรับ</div>
           </div>
           <div class="step_wrapper">
             <div class="step_number">
-              <a class="disabled">2</a>
+              <a id="a_2" class="disabled" onclick="Step_test(2)">2</a>
             </div>
-            <div class="block_disabled">
-              ลดหย่อน
-              <span class="d_block_disabled">ครอบครัว</span>
-            </div>
+            <div id="b_2" class="block_disabled">ลดหย่อนครอบครัว</div>
           </div>
           <div class="step_wrapper">
             <div class="step_number">
-              <a class="disabled">3</a>
+              <a id="a_3" class="disabled" onclick="Step_test(3)">3</a>
             </div>
-            <div class="block_disabled">
+            <div id="b_3" class="block_disabled">
               กองทุนสำรองเลี้ยงชีพ
-              <span class="d_block_disabled">เงินประกันสังคม</span>
-              <span class="d_block_disabled">และที่อยู่อาศัย</span>
+              <span style="display: block">เงินประกันสังคม</span>
+              <span>และที่อยู่อาศัย</span>
             </div>
           </div>
           <div class="step_wrapper">
             <div class="step_number">
-              <a class="disabled">4</a>
+              <a id="a_4" class="disabled" onclick="Step_test(4)">4</a>
             </div>
-            <div class="block_disabled">ประกัน</div>
+            <div id="b_4" class="block_disabled">ประกัน</div>
           </div>
           <div class="step_wrapper">
             <div class="step_number">
-              <a class="disabled">5</a>
+              <a id="a_5" class="disabled" onclick="Step_test(5)">5</a>
             </div>
-            <div class="block_disabled">กองทุนอื่นๆ</div>
+            <div id="b_5" class="block_disabled">กองทุนอื่นๆ</div>
           </div>
           <div class="step_wrapper">
             <div class="step_number">
-              <a class="disabled">6</a>
+              <a id="a_6" class="disabled" onclick="Step_test(6)">6</a>
             </div>
-            <div class="block_disabled">คำนวณภาษี</div>
+            <div id="b_6" class="block_disabled">คำนวณภาษี</div>
           </div>
         </div>
         <div class="cal_section">
           <!-- step_1 -->
-          <div class="step_1">
+          <div style="align-items: center" class="step_1" id="step1">
             <div class="sub_title">รายรับ</div>
             <div class="column">
               <div class="input_text_container">
                 <div class="input_text_label">เงินเดือน (บาท)</div>
                 <input
+                  id="salary_value"
                   class="input_text"
                   placeholder="เงินเดือนของคุณเดือนละ"
                   maxlength="10"
@@ -82,6 +86,7 @@
               <div class="input_text_container">
                 <div class="input_text_label">โบนัส (บาท)</div>
                 <input
+                  id="bonus_value"
                   class="input_text"
                   placeholder="ระบุโบนัสที่คุณได้รับในปีนี้"
                   maxlength="10"
@@ -93,6 +98,7 @@
                   รายได้อื่นๆ เช่น การขายของออนไลน์, รับจ้างฟรีแลนซ์ (บาท)
                 </div>
                 <input
+                  id="other_value"
                   class="input_text"
                   placeholder="ระบุรายได้ทั้งปี"
                   maxlength="10"
@@ -102,7 +108,7 @@
             </div>
           </div>
           <!-- step_2 -->
-          <div class="step_2" id="step_2">
+          <div style="display: none" class="step_2" id="step2">
             <div class="sub_title">รายการลดหย่อยภาษี : ครอบครัว</div>
             <div class="row">
               <div class="status">
@@ -137,7 +143,7 @@
             <div class="discount">ลดหย่อนคู่สมรสไม่มีรายได้ 60,000 บาท</div>
             <!-- single status -->
             <div class="check_box_container">
-              <div class="row">
+              <div class="row" style="flex-direction: column">
                 <div class="status">
                   <div>ลดหย่อนบิดา-มารดา (ตนเอง)</div>
                   <div class="row">
@@ -225,7 +231,7 @@
               <div>ลดหย่อนผู้พิการหรือทุพพลภาพ (ไม่มีเงินได้)</div>
               <div class="row">
                 <div class="status">
-                  <div class="row">
+                  <div class="row" style="flex-direction: column">
                     <div class="status">
                       <div class="checkbox"><input type="checkbox" />บิดา</div>
                     </div>
@@ -246,7 +252,7 @@
               <div>ลดหย่อนผู้พิการหรือทุพพลภาพ (คู่สมรสไม่มีเงินได้)</div>
               <div class="row">
                 <div class="status">
-                  <div class="row">
+                  <div class="row" style="flex-direction: column">
                     <div class="status">
                       <div class="checkbox">
                         <input type="checkbox" />คู่สมรส
@@ -264,7 +270,7 @@
             </div>
             <div class="discount">
               <div class="discount">
-                กรณีบิดา, มาดร, คู่สมรส, บิดาคู่สมรส, มารดาคู่สมรส
+                กรณีบิดา, มารดา, คู่สมรส, บิดาคู่สมรส, มารดาคู่สมรส
                 และบุตรของตนเอง หากเป็นผู้อื่นได้เพียง 1 คนเท่านั้น
                 ลดหย่อนได้คนละ 60,000 บาท (ต้องมีบัตรประจำตัวคนพิการ
                 และไม่มีรายได้)
@@ -272,7 +278,11 @@
             </div>
           </div>
           <!-- step_3 -->
-          <div class="step_3">
+          <div
+            style="display: none; align-items: center"
+            class="step_3"
+            id="step3"
+          >
             <div class="sub_title">
               รายการลดหย่อนภาษี : กองทุน เงินประกันสังคม และที่อยู่อาศัย
             </div>
@@ -315,7 +325,7 @@
             </div>
           </div>
           <!-- step_4 -->
-          <div class="step_4">
+          <div style="display: none" class="step_4" id="step4">
             <div class="sub_title">รายการลดหย่อยภาษี : ประกัน</div>
             <div class="column">
               <div class="row">
@@ -383,7 +393,11 @@
             </div>
           </div>
           <!-- step_5 -->
-          <div class="step_5">
+          <div
+            style="display: none; align-items: center"
+            class="step_5"
+            id="step5"
+          >
             <div class="sub_title">รายการลดหย่อนภาษี : กองทุนอื่นๆ</div>
             <div class="column">
               <div class="input_text_container">
@@ -432,7 +446,7 @@
             </div>
           </div>
           <!-- step_6 -->
-          <div class="step_6">
+          <div style="display: none" class="step_6" id="step6">
             <div class="column">
               <div class="row_1">
                 <div class="text_1">รวมเงินได้สุทธิ</div>
@@ -466,6 +480,7 @@
                   <div class="text_4">ลงทุน SSF อย่างเดียว</div>
                   <label id="ssf" class="fund">0</label>
                   <input
+                    id="ssf_input"
                     class="input_fund"
                     placeholder="ระบุจำนวนเงิน"
                     maxlength="10"
@@ -583,8 +598,15 @@
         </div>
         <!-- submit_section -->
         <div class="submit_section">
-          <button class="back_btn" id="step_1">ย้อนกลับ</button>
-          <button class="next_btn" onclick="step2()">ถัดไป</button>
+          <button id="back" class="back_btn" style="display: none">
+            ย้อนกลับ
+          </button>
+          <button id="next" class="next_btn" onclick="Step_test(2)">
+            ถัดไป
+          </button>
+          <button id="new" class="next_btn" style="display: none">
+            เริ่มทำใหม่
+          </button>
         </div>
       </div>
     </div>
