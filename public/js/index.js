@@ -31,7 +31,14 @@ function next_page(step_id) {
       document.getElementById("b_" + i).className = "block_disabled";
     }
   }
-  if (step_id == 6) {
+  if (step_id == 1) {
+    document.getElementById("back").style.display = "none";
+    document.getElementById("next").style.display = "";
+    document.getElementById("new").style.display = "none";
+  } else if (step_id == 6) {
+    document.getElementById("back").style.display = "";
+    document.getElementById("next").style.display = "none";
+    document.getElementById("new").style.display = "";
     netIncome =
       salary * 12 +
       bonus +
@@ -163,15 +170,6 @@ function next_page(step_id) {
     document.getElementById("remain").innerHTML = y.toLocaleString("en-US");
 
     return [netIncome, tax, labelSSF, labelRMF, save_tax];
-  }
-  if (step_id == 1) {
-    document.getElementById("back").style.display = "none";
-    document.getElementById("next").style.display = "";
-    document.getElementById("new").style.display = "none";
-  } else if (step_id == 6) {
-    document.getElementById("back").style.display = "";
-    document.getElementById("next").style.display = "none";
-    document.getElementById("new").style.display = "";
   } else {
     document.getElementById("back").style.display = "";
     document.getElementById("next").style.display = "";
