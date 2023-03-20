@@ -12,12 +12,6 @@ p {
   font-size: 22px;
   margin-bottom: 0;
 }
-.body_page {
-  align-items: center;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
 h1 {
   margin-bottom: 0;
   margin-top: 0;
@@ -29,12 +23,14 @@ h1 {
   background-color: #fff;
   margin-top: 40px;
   margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 12px;
   border-style: solid;
   border-width: 0;
-  width: 100%;
+  max-width: 80%;
 }
 .top_section {
   flex: 1;
@@ -42,12 +38,11 @@ h1 {
   text-align: center;
 }
 .step_section {
-  padding-left: 55px;
-  padding-right: 55px;
+  padding-left: auto;
+  padding-right: auto;
   padding-top: 40px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 .step_wrapper {
   flex: 1;
